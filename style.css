@@ -1,0 +1,236 @@
+html{
+  line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+  font-size: 125%;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  background-color: rgba(40, 40, 40, 1);
+  color: whitesmoke;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grouped styles */
+
+/* Flex declarations */
+.top-bar, 
+form,
+form div, 
+.desc-container {
+  display: flex;
+}
+
+form div,
+.desc-container {
+  flex-direction: column;
+}
+
+form div { 
+  align-items: center;
+}
+
+h1,
+h2,
+.desc-container,
+.journal td,
+.hours-log td,
+footer {
+  text-align: center;
+}
+
+/* Main styles */
+
+header {
+  height: 20vh;
+}
+
+.top-bar {
+  justify-content: end;
+}
+
+#dark-mode:hover,
+.journal .edit:hover,
+button[type=submit] {
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0 auto;
+  width: 40%;
+  min-width: 400px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 3rem;
+  border-bottom: 1px solid whitesmoke;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  border-bottom: 3px solid whitesmoke;
+}
+
+form div {
+  width: 20%;
+  margin: 20px 0;
+}
+
+form input, 
+form textarea {
+  width: 90%;
+  height: 30px;
+  margin-top: 10px;
+  flex-grow: grow;
+  box-shadow: none;
+  border: 1px solid rgba(40, 40, 40, 1);
+}
+
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0 10px 2px #3e97ea;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 16px;
+}
+
+.journal-heading,
+.journal {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.journal-heading th, .journal td {
+  border-bottom: 1px solid white;
+  width: 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+}
+
+.journal .edit,
+.journal-heading .editHead {
+  width: 5%;
+  color: #ea593e;
+  text-decoration: underline;
+}
+
+.hours-log {
+  margin: 0 auto;
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.hours-log th {
+  text-align: right;
+  margin-right: 10px;
+  width: 50%;
+}
+
+.hours-log td {
+  width: 50%;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+.juno {
+  color: #ea593e;
+}
+
+table th {
+  font-size: 1.5rem;
+}
+table td,
+label {
+  font-size: 1.25rem;
+}
+
+h2,
+button[type=submit] {
+  font-size: 2rem;
+}
+
+button[type=submit] {
+  border: 3px solid #3e97ea;
+  border-radius: 10px;
+  background-color: rgba(40, 40, 40, 1);
+  color: whitesmoke;
+  padding: 5px;
+  line-height: 0.8;
+}
+
+button[type=submit]:active {
+  color: #3e97ea;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0%;
+  margin: 0;
+}
+
+.edit:active {
+  color: #3e97ea;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  form div {
+    width: 30%;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 666px) {
+  .desc-container {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .journal .edit,
+  .journal-heading .editHead {
+    width: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  form div {
+    width: 100%;
+  }
+
+  h1 {
+    min-width: 300px;
+    font-size: 2rem;
+  }
+
+  form label,
+  .edit {
+    font-size: 1rem;
+  }
+}

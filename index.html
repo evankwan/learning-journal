@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Journal</title>
+  <script src="https://kit.fontawesome.com/7627ee882a.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="top-bar">
+        <p id='dark-mode'>Dark Mode <i class="fas fa-toggle-on"></i></p>
+      </div>
+      <h1>Learning Journal</h1>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper">
+      <form action="" method="POST" name="journalEntry">
+        <div class="date-container">
+          <label for="date"><i class="far fa-calendar-alt"></i> Date</label>
+          <input type="date" name="date" id="date" placeholder="Date" required>
+        </div>
+  
+        <div class="skill-container">
+          <label for="skill">Skill</label>
+          <input type="text" name="skill" id="skill" placeholder="What are you learning?" required>
+        </div>
+        
+        <div class="topic-container">
+          <label for="topic">Topic</label>
+          <input type="text" name="topic" id="topic" placeholder="What topics did you cover" required>
+        </div>
+        
+        <div class="number-container">
+          <label for="hours">Hours</label>
+          <input type="number" name="hours" id="hours" placeholder="0" required>
+        </div>
+      
+        <div class="desc-container">
+          <label for="desc">Description</label>
+          <textarea name="desc" id="desc" rows="1" placeholder="Enter a short description" maxlength="50"></textarea>
+        </div>
+
+        <div class="break"></div>
+
+        <button type='submit'><i class="fas fa-book"></i> </button>
+        
+      </form>
+    </div>
+  
+    <div class="wrapper">
+      <h2>Total hours spent learning</h2>
+      <table class="hours-log">
+        <!-- totalled hours go here -->
+      </table>
+    </div>
+  
+    <div class="wrapper">
+      <table class="journal-heading">
+        <tr>
+          <th scope='col' class='editHead'></th>
+          <th scope='col' class='dateHead'>Date</th>
+          <th scope='col' class='skillHead'>Skill</th>
+          <th scope='col' class='topicHead'>Topic</th>
+          <th scope='col' class='hoursHead'>Hours</th>
+          <th scope='col' class='descHead'>Description</th>
+        </tr>
+      </table>
+      <table class="journal">
+        <!-- journal entries go here -->
+      </table>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <p>Created at <a href="https://junocollege.com/" class="juno" target="_blank" rel="noopener">Juno College</a></p>
+    </div>
+  </footer>
+</body>
+</html>
